@@ -6,71 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <style>
-        /* body{
-            text-align: center;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #wrapper{
+            min-height: 100vh;
+        }
+      
+        img{
+            height: auto;
+            width: 19vh !important;
         }
 
-        #playerDrawsNewCard{
-            display: none;
+        #second-draw{    
+            width: 100% !important;
+            overflow: scroll;
         }
 
-        .buttons{
-            display: flex;
-            gap: 2px;
-            justify-content: center;
+        @media (max-width: 768px){
+            #second-draw{
+                justify-content: start !important;
+            }
         }
-
-        #card{
-            position: relative;
-            right: 100%;
-            transition: 0.5s;
-        }
-
-        .card-drawn{
-            right: 0% !important;
-            transition: 0.5s;
-        } */
     </style>
-    
 </head>
 <body>
 
-    <h3>JS</h3>
+    <div id="wrapper" class="d-flex flex-column justify-content-center align-items-center gap-5 p-5">
 
-    <div>
+
+    <div class="text-center">
+            <h3>Blackjack</h3>
+            <p>Get 21 to win! Above 21 and you lose! Below 21, then you have a chance!</p>
         <div class="buttons">
-            <button id="playerStartsGame">Start Game</button>
-            <button id="playerDrawsNewCard">Draw New Card</button>
-        </div>
-        <p>Status : <span id="result"></span></p>
-        <p>Drawn: <span id="drawn"></span></p>
-
-        <div>
-            <p>First Card</p>
-            <span id="firstCard"></span>
-            <!-- <img src="cards/2_of_hearts.png" id="card" alt=""> -->
-
-            <p>Second Card</p>
-            <span id="secondCard"></span>
-
-            <p>Drawn Card</p>
-            <span id="drawnCard"></span>
-
-            <p>Total</p>
-            <span id="total"></span>
-
-            <p id="player-el">
-
-            </p>
+            <button id="playerStartsGame" class="btn btn-success">Start Game</button>
+            <button id="playerDrawsNewCard" class="btn btn-info text-white">Draw New Card</button>
+            <button class="btn btn-danger text-white" onclick="location.reload()">Reset</button>
         </div>
     </div>
 
-    <script type="module" src="js/logic.js"></script>
+    <div id="first-draw">
+        <div class="d-flex gap-3">
+
+            <div id="left-half">
+            </div>
+
+            <div id="right-half">
+            </div>
+
+        </div>   
+    </div>
+
+    <div id="second-draw" class="d-flex gap-3 justify-content-center">
+    </div>
+
+    <div class="text-center">
+        <p class="d-none"><span id="first-draw-el"></span> </p>
+        <p  class="d-none" id="additional-draw-el"></p>
+        <p id="sum-el"></p>
+        <p><span id="status-el"></span> </p>
+    </div>
+
    
     
     
-
+    </div>
   
+    <script type="module" src="js/logic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
