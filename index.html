@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* body{
+            text-align: center;
+        }
+
+        #playerDrawsNewCard{
+            display: none;
+        }
+
+        .buttons{
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+        }
+
+        #card{
+            position: relative;
+            right: 100%;
+            transition: 0.5s;
+        }
+
+        .card-drawn{
+            right: 0% !important;
+            transition: 0.5s;
+        } */
+    </style>
+    
+</head>
+<body>
+
+    <h3>JS</h3>
+
+    <div>
+        <div class="buttons">
+            <button id="playerStartsGame">Start Game</button>
+            <button id="playerDrawsNewCard">Draw New Card</button>
+        </div>
+        <p>Status : <span id="result"></span></p>
+        <p>Drawn: <span id="drawn"></span></p>
+
+        <div>
+            <p>First Card</p>
+            <span id="firstCard"></span>
+            <!-- <img src="cards/2_of_hearts.png" id="card" alt=""> -->
+
+            <p>Second Card</p>
+            <span id="secondCard"></span>
+
+            <p>Drawn Card</p>
+            <span id="drawnCard"></span>
+
+            <p>Total</p>
+            <span id="total"></span>
+
+            <p id="player-el">
+
+            </p>
+        </div>
+    </div>
+
+    <script type="module" src="js/logic.js"></script>
+   
+    
+    
+
+  
+</body>
+</html>
